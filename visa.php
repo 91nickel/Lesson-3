@@ -3,7 +3,7 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 
-if (!empty($argv)) {
+if (!empty($argv[1])) {
     $text2 = 'Значение в списках не значится';
     $table = fopen('https://raw.githubusercontent.com/netology-code/php-2-homeworks/master/files/countries/opendata.csv', "r");
     while (($data = fgetcsv($table, 1000, ",")) !== FALSE) {
